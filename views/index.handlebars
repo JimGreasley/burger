@@ -1,0 +1,47 @@
+
+<h1>Eat da Burger</h1>
+
+{{!-- <h3>Show the burgers ready to be devoured and those that already have been</h3> --}}
+
+    <div>
+      {{#each burgers}}
+        <div id="left-side">
+          <ul>
+            {{#if this.devoured}}
+            {{else}}
+              <li>
+                <p>{{this.id}} {{this.burger}} <span>
+                  <button class="devour-burger" data-id="{{this.id}}">Devour It!</button>
+                </span></p>
+              </li>
+            {{/if}}
+          </ul>
+        </div>
+        <div id="right-side">
+          <ul>
+            {{#if this.devoured}}
+              <li>
+                <p>{{this.id}} {{this.burger}} <span>
+                  <button class="delete-burger" data-id="{{this.id}}">Delete</button>
+                </span></p>
+              </li>
+            {{/if}}
+          </ul>
+        </div>
+      {{/each}}
+    </div>
+    <br> 
+    <br>
+    <div>
+      <form class="create-burger">
+        {{!-- <div class="form-group"> --}}
+          {{!-- <label for="ca">Cat Name:</label> --}}
+          {{!-- <input type="text" id="bgr" name="name"> --}}
+        {{!-- </div>
+        <form action="/" method="POST"> --}}
+          <textarea type="text" id="bgr" name="name"></textarea> 
+          <p>
+          <button type="submit">Submit</button>
+          </p>
+      </form>
+    </div>
