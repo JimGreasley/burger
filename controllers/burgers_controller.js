@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-// Import the model (burgers.js) to use its database functions.
+// Import the model (burger.js) to use its database functions.
 
 const burger = require("../models/burger.js");
 
@@ -20,10 +20,12 @@ router.get("/", function(req, res) {
 
 router.post("/api/burgers", function(req, res) {
   console.log(req.body);     
-   //["burger", "devoured"], [req.body],
+  //console.log("rb_bn: ", req.body.burger_name, " rb.dev: ", req.body.devoured);
   burger.create(
-      ["burger", "devoured"],
-      [req.body.name, req.body.devoured],
+//      ["burger_name", "devoured"],
+//      [req.body.burger_name, req.body.devoured],
+      ["burger_name"],
+      [req.body.burger_name],
    function(result) {
       // Send back the ID of the new burger
     res.json({ id: result.insertId });

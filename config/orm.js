@@ -67,11 +67,6 @@ var orm = {
 
     console.log(queryString);
 
-    //var queryString = "INSERT INTO ?? SET ?? VALUES (?)";
-    //console.log(col, val); 
-    //console.log(queryString);
-    //connection.query(queryString, [table, col, val], function(err, result) {
-    
     connection.query(queryString, vals, function(err, result) {  
       if (err) {
         throw err;
@@ -81,11 +76,6 @@ var orm = {
   },
    // In this case, objColVals should be {devoured: true}
   updateOne: function(table, objColVals, condition, cb) {
-    //var queryString = "UPDATE ?? SET ?? WHERE ?";
-    // queryString += " SET ";
-    // queryString += objToSql(objColVals);
-    // queryString += " WHERE ";
-    // queryString += condition;
 
     var queryString = "UPDATE " + table;
 
@@ -120,35 +110,5 @@ var orm = {
   }
 };
 
-// Export the orm object for the model (cat.js).
+// Export the orm object for the model (burger.js).
 module.exports = orm;
-
-
-// selectAll: function(table) {
-//   var queryString = "SELECT * FROM ??";
-//   //console.log(queryString);
-//   connection.query(queryString, [table], function(err, result) {
-//     if (err) throw err;
-//     console.table(result);
-//   });
-// },
-
-// insertOne: function(table, cols, vals) {
-      
-//   var queryString = "INSERT INTO ?? (??) VALUES (?)";
-
-//   connection.query(queryString, [table, cols, vals], function(err, result) {
-//     if (err) throw err;
-//     console.table(result);
-//   });
-  
-//   console.log(queryString);
-
-//   connection.query(queryString, vals, function(err, result) {
-//     if (err) {
-//       throw err;
-//     }
-
-//     cb(result);
-//   });
-// }
