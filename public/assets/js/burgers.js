@@ -28,14 +28,14 @@ $(document).ready(function() {
           burger_name: $("#bgr").val().trim()
 //          devoured: false
       };
-      console.log("new burger: ", newBurger);
+      //console.log("new burger: ", newBurger);
       // Send the POST request.  //{url: "/api/burgers",
       $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger
       }).then(
         function() {
-          console.log("created new burger");
+          //console.log("created new burger");
           // Reload the page to get the updated list
           location.reload();
         }
@@ -50,7 +50,7 @@ $(document).ready(function() {
         type: "DELETE"
       }).then(
         function() {
-          console.log("deleted burger", id);
+          //console.log("deleted burger", id);
           // Reload the page to get the updated list
           location.reload();
         }

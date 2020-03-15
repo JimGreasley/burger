@@ -17,20 +17,20 @@ h1, form {
 
 #left-side {
     float: left;
-    width: 30%;
-    border: 1px solid green;
+    width: 35%;
+    /* border: 1px solid green; */
     padding: 0;
-    margin: 0;
+    margin-right: 0;
     /* margin-right: 20px; */
 }
 
 #right-side {
     float: right;
     /* display: inline-block; */
-    width: 30%;
-    border: 1px solid green;
+    width: 35%;
+    /* border: 1px solid green; */
     padding: 0;
-    margin: 0;
+    margin-left: 0;
 }
 
 

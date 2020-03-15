@@ -20,6 +20,11 @@ https://secure-ridge-29657.herokuapp.com/
 https://github.com/JimGreasley/burger
 
 
+### Screen image:
+
+![](public/assets/images/eat-da-burger.png)
+
+
 
 The app was created using MySQL, Node, Express, Handlebars and a homemade ORM (Object Relation Mapping).
 

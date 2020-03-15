@@ -13,13 +13,13 @@ router.get("/", function(req, res) {
     var hbsObject = {
       burgers: data
     };
-    console.log(hbsObject);
+    //console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
 
 router.post("/api/burgers", function(req, res) {
-  console.log(req.body);     
+  //console.log(req.body);     
   //console.log("rb_bn: ", req.body.burger_name, " rb.dev: ", req.body.devoured);
   burger.create(
 //      ["burger_name", "devoured"],
@@ -36,8 +36,8 @@ router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   //var col_val = "devour = true";
-  console.log("req.body:", req.body);
-  console.log("condition", condition);
+  //console.log("req.body:", req.body);
+  //console.log("condition", condition);
 
   burger.update({devoured: 'true'},
      condition, function(result) {
